@@ -1,0 +1,175 @@
+@base:75;
+@design:750;
+
+// .adaptor( @value: 320px ) {
+//     @media(min-width: @value) {
+//       html {
+//         font-size: @value / @design * @base;
+//       }
+//     }
+//   }
+//   .adaptor(320px);
+//   .adaptor(360px);
+//   .adaptor(375px);
+//   .adaptor(384px);
+//   .adaptor(400px);
+//   .adaptor(414px);
+//   .adaptor(424px);
+//   .adaptor(480px);
+//   .adaptor(540px);
+//   .adaptor(640px);
+//   .adaptor(720px);
+//   .adaptor(750px);
+.clearfix:after{
+    content: "";
+    display: block;
+    clear:both;
+    visibility: visible;
+    height: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a:link,a:visited,a:hover,a:active{
+    text-decoration: none
+}
+a{
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(234, 247, 212);
+}
+ul,ol{
+    list-style: none;
+}
+
+.container{
+    width: 100%;
+    height: 100rem/@base;
+    max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto
+}
+.ey_header{
+    height: 100rem/@base;
+    // background-color: pink;
+    padding: 0 100rem/@base;
+    background-image: linear-gradient(to bottom,#fff,#ccc);
+    border-bottom: 1px solid #ccc;
+   
+    .search,
+    .out{
+        width: 100rem/@base;
+        height: 100rem/@base;
+        position: absolute;
+        top: 0;
+    }
+
+    ul {
+        // border-right: 2px solid skyblue;
+        li {
+            float: left;
+            width: 50%;
+            a{  
+                text-align: center;
+                display: block;
+                height: 100rem/@base;
+               color: #000;
+               line-height: 100rem/@base;
+               font-size: 20px;
+               padding: 0 10rem/@base;
+            //    border-left: 2px solid skyblue;
+
+            &.current{
+                background-color: #ccc;
+                color: goldenrod;
+            }
+            }
+        }
+    }
+}
+.play{
+    width: 100%;
+    height: 525rem/@base;
+    background-color: #000;
+     //display: none;
+    .title{
+        height: 50rem/@base;
+        width: 100%;
+        background-color: skyblue;
+        text-align:center;
+        line-height: 50rem/@base;
+        color: #fff;
+        font-size: 16px;
+        background-image: linear-gradient(to bottom,#ddd, rgb(108, 228, 236))
+    }
+    .ey_video{
+        width: 100%;
+        height: 400rem/@base;
+
+        video{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+    .console{
+        background-color: skyblue;
+        padding: 0  75rem/@base;
+        position: relative;
+        height: 75rem/@base;
+
+        .full,.player{
+            display: blcok;
+            position: absolute;
+            top: 0;
+            width: 75rem/@base;
+            height:  75rem/@base;
+            line-height: 75rem/@base;
+            font-size: 40rem/@base;
+            text-align: center;
+        }
+        .player{
+           left: 0;   
+        }
+        .progress{
+            position: relative;
+            line-height: 75rem/@base;
+
+            div{
+                display: inline-block;
+                height: 20rem/@base;
+                width: 100%;
+                
+                
+                background-color: #ccc;
+                vertical-align: middle;
+            }
+            i{
+                position: absolute;
+                left: 0;
+                height: 20rem/@base;
+                width: 0;
+                background-color: red;
+                
+            }
+        }
+        .full{
+            right: 0; 
+        }
+    }
+
+}
+
+.ey_banner{
+    img {
+        display: block;
+        width: 100%;
+    }
+}
